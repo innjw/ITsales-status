@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT영업부 매출 현황</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <h1>IT영업부 매출 현황</h1>
+      <p class="header-date">기준일: 2026년 5월 22일</p>
+    </header>
+
+    <!-- 총 매출액 -->
+    <section class="total-sales">
+      <p class="section-label">총 매출액</p>
+      <p class="total-value" id="total-value">₩ 0</p>
+    </section>
+
+    <!-- 월별 매출액 -->
+    <section class="panel">
+      <h2 class="panel-title">월별 매출액</h2>
+      <div class="bar-chart" id="monthly-chart">
+        <p class="empty-text">등록된 매출 데이터가 없습니다.</p>
+      </div>
+    </section>
+
+    <!-- 영업 이력 관리 버튼 -->
+    <section class="actions panel">
+      <h2 class="panel-title">영업 이력 관리</h2>
+      <div class="action-buttons">
+        <a href="input.html" class="btn btn-primary">+ 영업 건 입력</a>
+        <a href="edit.html" class="btn btn-secondary">✎ 영업 건 수정</a>
+        <a href="detail.html" class="btn btn-outline">≡ 상세 현황</a>
+      </div>
+    </section>
+
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

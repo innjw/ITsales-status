@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영업 건 입력</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container container-narrow">
+
+    <header class="header">
+      <h1>IT영업부 매출 현황</h1>
+      <a href="index.html" class="header-back">← 메인으로</a>
+    </header>
+
+    <section class="panel">
+      <h2 class="panel-title">영업 건 입력</h2>
+
+      <form class="form" id="input-form">
+        <div class="form-group">
+          <label class="form-label" for="client">고객사</label>
+          <select class="form-input form-select" id="client" name="client" required>
+            <option value="" disabled selected>고객사를 선택하세요</option>
+            <option value="우리금융지주">우리금융지주</option>
+            <option value="우리은행">우리은행</option>
+            <option value="우리카드">우리카드</option>
+            <option value="우리투자증권">우리투자증권</option>
+            <option value="동양생명">동양생명</option>
+            <option value="ABL생명">ABL생명</option>
+            <option value="우리금융캐피탈">우리금융캐피탈</option>
+            <option value="우리펀드서비스">우리펀드서비스</option>
+            <option value="우리신용정보">우리신용정보</option>
+            <option value="우리자산운용">우리자산운용</option>
+            <option value="우리자산신탁">우리자산신탁</option>
+            <option value="우리금융F&I">우리금융F&I</option>
+            <option value="우리금융저축은행">우리금융저축은행</option>
+            <option value="우리벤처파트너스">우리벤처파트너스</option>
+            <option value="우리 PE자산운용">우리 PE자산운용</option>
+            <option value="우리금융경영연구소">우리금융경영연구소</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="type">종류</label>
+          <select class="form-input form-select" id="type" name="type" required>
+            <option value="" disabled selected>종류를 선택하세요</option>
+            <option value="SI">SI</option>
+            <option value="SM">SM</option>
+            <option value="솔루션">솔루션</option>
+            <option value="기타">기타</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="amount">금액 (원)</label>
+          <input
+            class="form-input"
+            type="text"
+            id="amount"
+            name="amount"
+            inputmode="numeric"
+            placeholder="금액을 입력하세요"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="date">계약일</label>
+          <input
+            class="form-input"
+            type="date"
+            id="date"
+            name="date"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="desc">설명</label>
+          <textarea
+            class="form-input form-textarea"
+            id="desc"
+            name="desc"
+            placeholder="설명을 입력하세요 (최대 500자)"
+            maxlength="500"
+          ></textarea>
+          <p class="form-hint">최대 500자</p>
+        </div>
+
+        <div class="form-actions">
+          <a href="index.html" class="btn btn-secondary">취소</a>
+          <button type="submit" class="btn btn-primary">저장</button>
+        </div>
+      </form>
+    </section>
+
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

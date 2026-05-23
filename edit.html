@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영업 건 수정</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container container-narrow">
+
+    <header class="header">
+      <h1>IT영업부 매출 현황</h1>
+      <a href="index.html" class="header-back">← 메인으로</a>
+    </header>
+
+    <!-- 기존 데이터 목록 -->
+    <section class="panel">
+      <h2 class="panel-title">수정할 영업 건 선택</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>고객사</th>
+            <th>종류</th>
+            <th>금액</th>
+            <th>계약일</th>
+            <th>수정</th>
+          </tr>
+        </thead>
+        <tbody id="data-list">
+          <tr class="empty-row">
+            <td colspan="5">등록된 영업 건이 없습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 수정 폼 -->
+    <section class="panel" id="edit-form">
+      <h2 class="panel-title">영업 건 수정</h2>
+
+      <form class="form" id="edit-form-submit">
+        <input type="hidden" id="edit-id" name="edit-id">
+        <div class="form-group">
+          <label class="form-label" for="client">고객사</label>
+          <select class="form-input form-select" id="client" name="client" required>
+            <option value="" disabled selected>고객사를 선택하세요</option>
+            <option value="우리금융지주">우리금융지주</option>
+            <option value="우리은행">우리은행</option>
+            <option value="우리카드">우리카드</option>
+            <option value="우리투자증권">우리투자증권</option>
+            <option value="동양생명">동양생명</option>
+            <option value="ABL생명">ABL생명</option>
+            <option value="우리금융캐피탈">우리금융캐피탈</option>
+            <option value="우리펀드서비스">우리펀드서비스</option>
+            <option value="우리신용정보">우리신용정보</option>
+            <option value="우리자산운용">우리자산운용</option>
+            <option value="우리자산신탁">우리자산신탁</option>
+            <option value="우리금융F&I">우리금융F&I</option>
+            <option value="우리금융저축은행">우리금융저축은행</option>
+            <option value="우리벤처파트너스">우리벤처파트너스</option>
+            <option value="우리 PE자산운용">우리 PE자산운용</option>
+            <option value="우리금융경영연구소">우리금융경영연구소</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="type">종류</label>
+          <select class="form-input form-select" id="type" name="type" required>
+            <option value="" disabled selected>종류를 선택하세요</option>
+            <option value="SI">SI</option>
+            <option value="SM">SM</option>
+            <option value="솔루션">솔루션</option>
+            <option value="기타">기타</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="amount">금액 (원)</label>
+          <input
+            class="form-input"
+            type="text"
+            id="amount"
+            name="amount"
+            inputmode="numeric"
+            placeholder="금액을 입력하세요"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="date">계약일</label>
+          <input
+            class="form-input"
+            type="date"
+            id="date"
+            name="date"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="desc">설명</label>
+          <textarea
+            class="form-input form-textarea"
+            id="desc"
+            name="desc"
+            placeholder="설명을 입력하세요 (최대 500자)"
+            maxlength="500"
+          ></textarea>
+          <p class="form-hint">최대 500자</p>
+        </div>
+
+        <div class="form-actions">
+          <a href="index.html" class="btn btn-secondary">취소</a>
+          <button type="submit" class="btn btn-primary">저장</button>
+        </div>
+      </form>
+    </section>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
